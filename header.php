@@ -12,8 +12,8 @@
 
     <style>
         .fundo {
-            background-color: #41abe0;
-            background-image: linear-gradient(0deg, #41abe0 0%, #97D9E1b 100%);
+            background-color: #D9AFD9;
+            background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
 
         }
         /*.fundo {
@@ -27,7 +27,7 @@
         }*/
 
         .fundo-cinza {
-            background-color: #f8f8f8;
+            background-color: #cad7de;
         }
         .active{
             font-weight: bold;

@@ -1,6 +1,6 @@
 <?php include "header.php";?>
 
-<!--<?php include "conexao.php";?>-->
+<?php include "conexao.php";?>
 
 <main class="container">
     <div class="row w-50 ms-auto me-auto vh-100">
@@ -8,8 +8,8 @@
             <form action="login-validar.php" method="post">
                 <div class="row">
                     <div class="col text-center mt-3">
-                    <h1>Bem Vindo ao Sistema de Controle de Estoque</h1>
-                    
+                        <img src="imagens\EkePreto.png">  
+                                       
                     <!--<?php include_once "mensagemInvalido.php";?>-->
                     
                     <hr>
