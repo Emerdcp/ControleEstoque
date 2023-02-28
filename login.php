@@ -1,5 +1,4 @@
 <?php include "header.php";?>
-
 <?php include "conexao.php";?>
 
 <main class="container">
@@ -9,18 +8,15 @@
                 <div class="row">
                     <div class="col text-center mt-3">
                         <img src="imagens\EkePreto.png">  
-                                       
-                    <!--<?php include_once "mensagemInvalido.php";?>-->
-                    
-                    <hr>
+                        <hr>
                         <h1>Usuário</h1>
-                        <!--<label class="form-label">Usuário</label>-->
-                        <input type="email" id="usuario" class="form-control" placeholder="E-mail" name="cad_usuario" required>
+                        <?php include_once "mensagemUsuarioInvalido.php";?>
+                        <input type="email" id="fun_email" class="form-control" placeholder="E-mail" name="fun_email" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col text-center mt-3">
-                        <input type="password" id="senha" class="form-control" placeholder="Senha" name="cad_senha" required>
+                        <input type="password" id="fun_senha" class="form-control" placeholder="Senha" name="fun_senha" required>
                     </div>
                 </div>
                     <div class="col text-center mt-3">

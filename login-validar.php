@@ -4,9 +4,16 @@ $senha = $_POST['fun_senha'];
 
 include_once "conexao.php";
 
-$sqlvalidar = "SELECT * FROM CAD_FUNCIONARIO WHERE FUN_EMAIL = '$usuario' AND CAD_SENHA = '$senha'";
+$sqlvalidar = "SELECT * FROM CAD_FUNCIONARIO WHERE FUN_EMAIL = '$usuario' AND FUN_SENHA = '$senha'";
 
-$dados = 
-
-
+$validarDados = $con->query($sqlvalidar);
+$data = $validarDados->fetchAll(PDO::FETCH_ASSOC);
+//var_dump($data);
+if($validarDados->rowCount() > 0){
+    session_start();
+    $_SESSION["fun_email"] = $usuario;
+    header("location: index.php");
+}else{
+    header("location:login.php?msg=mensagemUsuarioInvalido");
+}
 ?>
