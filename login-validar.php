@@ -7,7 +7,8 @@ include_once "conexao.php";
 $sqlvalidar = "SELECT * FROM CAD_FUNCIONARIO WHERE FUN_EMAIL = '$usuario' AND FUN_SENHA = '$senha'";
 
 $validarDados = $con->query($sqlvalidar);
-$data = $validarDados->fetchAll(PDO::FETCH_ASSOC);
+
+$data = $validarDados->fetchAll(PDO::FETCH_ASSOC);         //Usar sempre que tiver um select
 //var_dump($data);
 if($validarDados->rowCount() > 0){
     session_start();

@@ -35,7 +35,7 @@
             <a class="nav-link" href="cad_funcionario.php">Funcionário</a>
         </li>
         <li>
-            <a class="nav-link" href="#">Produto</a>
+            <a class="nav-link" href="cad_item.php">Produto</a>
         </li>
         <li>
             <a class="nav-link" href="#">Entrada</a>
