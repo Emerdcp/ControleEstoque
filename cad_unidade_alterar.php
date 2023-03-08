@@ -86,8 +86,8 @@ echo "$uni_unidadeA - $uni_descricaoA"
                                         </div>
                                         <div class="col-4">
                                             <span>
-                                                <a class='btn btn-light' href="?uni_unidade=<?php echo $unidade['UNI_UNIDADE']?>"><i class="bi bi-pencil-fill"></i></a>
-                                                <a class='btn btn-light' href="cad_unidade_delete.php?unidade=<?php echo $unidade['UNI_UNIDADE']?>"><i class="bi bi-trash-fill"></i> Excluir</a>
+                                                <a class='btn btn-light' href="?uni_unidade=<?php echo $unidade['UNI_UNIDADE']?>"><i class="bi bi-pencil-fill"> Alterar</i></a>
+                                                <a class='btn btn-light' href="cad_unidade_delete.php?unidade=<?php echo $unidade['UNI_UNIDADE']?>"><i class="bi bi-trash-fill"> Excluir</i></a>
                                             </span>
                                         </div>
                                     </li>

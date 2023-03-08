@@ -38,6 +38,9 @@
             <a class="nav-link" href="cad_item.php">Produto</a>
         </li>
         <li>
+            <a class="nav-link" href="cad_unidade.php">Unidade</a>
+        </li>
+        <li>
             <a class="nav-link" href="#">Entrada</a>
         </li>
         <li>
