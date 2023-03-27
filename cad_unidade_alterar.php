@@ -10,23 +10,23 @@ include_once "header.php";
 </div>
 
 <?php 
-$uni_unidadeA = $_GET['uni_unidade'];
-$uni_descricaoA = $_GET[''];
+$uni_unidade = $_GET['uni_unidade'];
+$uni_descricao = '';
 
 include_once "conexao.php";
 
-$sqlBuscaUni = "SELECT * FROM CAD_UNIDADE WHERE UNI_UNIDADE = '$uni_unidadeA'";
+$sqlBuscaUni = "SELECT * FROM CAD_UNIDADE WHERE UNI_UNIDADE = '$uni_unidade'";
 
-$sqlBuscaTodosUni = $con->query($sqlBuscaTodosUni);
+$sqlBuscaTodosUni = $con->query($sqlBuscaUni);
 
 $dadosUni = $sqlBuscaTodosUni->fetchAll(PDO::FETCH_ASSOC);
 
-while ($tarefaUni = $con->query($dadosUni));{
-    $uni_unidadeA = $dadosUni['uni_unidade'];
-    $uni_descricaoA = $dadosUni['uni_descricao'];
+foreach ($dadosUni as $dados){
+    $uni_unidade = $dados['UNI_UNIDADE'];
+    $uni_descricao = $dados['UNI_DESCRICAO'];
 }
 
-echo "$uni_unidadeA - $uni_descricaoA"
+//echo "$uni_unidade - $uni_descricao"
 ?>
 
 <section class="vh-100 fundo">
@@ -42,24 +42,24 @@ echo "$uni_unidadeA - $uni_descricaoA"
                     <div class="card">
                         <div class="card-body p-5">
                 
-                            <form class="d-flex justify-content-center align-items-center mb-4" action="cad_unidade_alterar.php" method="post">
+                            <form class="d-flex justify-content-center align-items-center mb-4" action="cad_unidade_alterar_confirmar.php" method="post">
                             <div class="cal-md-12 col-lg-10">    
                                 <div class="row">
                                     <div class="col-2">
                                         <div class="form-group mb-3" class="col-md-2">
                                             <label class="label">Unidade</label>
-                                            <input type="text" placeholder="Unidade" class="form-control" name="uni_unidade" id="uni_unidade" <?php echo $uni_unidade; ?>>
+                                            <input type="text" placeholder="Unidade" class="form-control" name="uni_unidade" id="uni_unidade" value="<?php echo $uni_unidade; ?>">
                                         </div>
                                     </div>
                                     <div class="col-10">
                                         <div class="form-group mb-3" class="col-md-2">
                                             <label class="label">Descrição Unidade</label>
-                                            <input type="text" placeholder="Descrição" class="form-control" name="uni_descricao" id="uni_descricao" required <?php echo $uni_descricao; ?>>
+                                            <input type="text" placeholder="Descrição" class="form-control" name="uni_descricao" id="uni_descricao" required value="<?php echo $uni_descricao; ?>">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <button type="submit" class="btn btn-dark ms-2"><i class="bi bi-save"></i> ADD</button>
+                                    <button type="submit" class="btn btn-dark ms-2"><i class="bi bi-save"></i> Alterar</button>
                                     
                                 </div>
                             </div>
