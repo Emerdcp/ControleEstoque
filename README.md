@@ -12,3 +12,7 @@ add fun_nome;
 add fun_status;
 )
 creat unique index ix fun_id on cad_funcionario (cad_funcionario)
+
+
+usuário: emerson@hotmail.com
+senha: 123
