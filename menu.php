@@ -2,7 +2,7 @@
   <!-- Container wrapper -->
   <div class="container">
     <!-- Navbar brand -->
-    <a class="navbar-brand me-2" href="https://mdbgo.com/">
+    <a class="navbar-brand me-2" href="cad_funcionario.php">
       <img
         src="imagens/EkePreto.png"
         height="40"
